@@ -86,6 +86,7 @@ module Main where
 
   playRound :: Move  -> [Cell] -> IO ()
   playRound move board = do
+    putStrLn $ (show move) ++ " 's turn."
     putStrLn $ "Pick a cell from A1 to C3."
     renderBoard board
     putStr "\nInput: "
@@ -104,6 +105,5 @@ module Main where
   main :: IO ()
   main = do
     putStrLn $ "The game is beginning."
-    putStrLn $ "X goes first."
     let newBoard = replicate 9 Empty
     playRound X newBoard
