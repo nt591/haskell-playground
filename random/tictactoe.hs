@@ -12,7 +12,7 @@ module Main where
 
   instance Show Cell where
     show (Occupied X)     = "X"
-    show (Occupied O)    = "O"
+    show (Occupied O)     = "O"
     show Empty            = " "
 
   instance Eq Cell where
